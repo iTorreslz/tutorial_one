@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Apple",
+        "country": "United States",
+        "contact": "900 812 703"
+    },
+    {
+        "id": 2,
+        "name": "Samsung",
+        "country": "South Korea",
+        "contact": "900 376 153"
+    },
+    {
+        "id": 3,
+        "name": "Huawei",
+        "country": "China",
+        "contact": "900 873 699"
+    },
+    {
+        "id": 4,
+        "name": "Xiaomi",
+        "country": "China",
+        "contact": "900 437 221"
+    },
+    {
+        "id": 5,
+        "name": "Google",
+        "country": "United States",
+        "contact": "900 478 185"
+    }
+]

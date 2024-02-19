@@ -1,0 +1,17 @@
+<h2>Provider Details</h2>
+
+<div *ngIf="provider">
+    <h3>{{ provider.name }}</h3>
+    <h4>{{ provider.country}}</h4>
+    <h4>Contact: {{ provider.contact}}</h4>
+    <h2>Products:</h2>
+    <div *ngFor="let product of products">
+
+        <h3>
+            <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+                {{ product.name }}
+            </a>
+        </h3>
+
+    </div>
+</div>
