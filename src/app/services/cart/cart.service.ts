@@ -26,4 +26,24 @@ export class CartService {
   getShippingPrices() {
     return this.http.get<{ type: string, price: number }[]>('assets/shipping.json');
   }
+
+  addToLocalStorage() {
+    if (localStorage.hasOwnProperty("alreadyPurchased")) {
+      const alreadyPurchased = localStorage.getItem('alreadyPurchased')!.split(",");
+      this.items.forEach(item => {
+        if (!alreadyPurchased.includes(String(item.id))) {
+          alreadyPurchased.push(`${item.id}`);
+          localStorage.setItem('alreadyPurchased', `${alreadyPurchased}`);
+        }
+      });
+    } else {
+      let alreadyPurchased: string[] = [];
+
+      this.items.forEach(item => {
+        alreadyPurchased.push(`${item.id}`);
+      });
+
+      localStorage.setItem('alreadyPurchased', `${alreadyPurchased}`);
+    }
+  }
 }

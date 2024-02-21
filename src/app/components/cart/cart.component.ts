@@ -27,6 +27,7 @@ export class CartComponent {
   });
 
   onSubmit(): void {
+    this.cartService.addToLocalStorage();
     this.items = this.cartService.clearCart();
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.checkoutForm.reset();
